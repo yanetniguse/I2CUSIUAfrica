@@ -1,0 +1,346 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0; /* Smaller padding */
+    color: yellow;
+    background-image: url('navbar_background.jpg');
+    /*  Dark blue background color */
+    /*border-radius: 20px; /* Rounded corners */
+    
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+}
+
+.navbar ul li {
+    font-size: small;
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: yellow; /* Change color to darken blue */
+    text-transform: uppercase;
+}
+
+.navbar ul li:hover a {
+    text-decoration: underline;
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background:  #00008B;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s, opacity 0.5s;
+    opacity: 0; /* Initially hide the underline */
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+    opacity: 1; /* Show the underline on hover */
+}
+/*nav responsiveness*/
+/* Existing CSS */
+
+/* Existing CSS */
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 100%;
+        padding: 5px 0; /* Adjust padding for smaller screens */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; /* Arrange items in the navbar */
+        align-items: center;
+    }
+
+    .navbar ul {
+        display: none; /* Hide the navigation links by default */
+        text-align: center;
+    }
+
+    .navbar ul li {
+        display: block;
+        margin: 15px 0;
+        padding-top: 5px;
+    }
+
+    .navbar ul li a {
+        display: block;
+    }
+
+    .navbar.active ul {
+        display: block; /* Show the navigation links when navbar is active */
+    }
+
+    .navbar .logo {
+        margin-left: 20px; /* Adjust margin for the logo */
+    }
+
+    .navbar ul {
+        display: flex; /* Display the navigation links as a flex container */
+        padding-right: 10px; /* Add padding to the right */
+    }
+
+    .navbar ul li {
+        margin: 0 10px; /* Adjust margin for the navigation links */
+        margin: 0 5px; /* Reduce margin for the navigation links */
+        
+    }
+    
+}
+
+    .content {
+        margin-top: 50px; /* Adjust margin to create space for the navbar */
+    }
+
+
+.content {
+    text-align: center;
+    color:  goldenrod;
+    margin-top: 100px;
+}
+
+.content h1 {
+    font-size: 50px;
+    margin-top: 80px;
+    color:  gold;
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 300;
+    line-height: 25px;
+    font-size: 25px;
+    font-weight: bold;
+    
+}
+button {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    color: goldenrod;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: transparent ; /* Set initial background to transparent */
+    transition:  0.5s; /* Add transition effect for background color */
+}
+
+button span {
+    background: yellow; /* Set the full color background */
+    height: 100%;
+    width: 0; /* Initially set width to 0 */
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width 0.5s; /* Apply transition effect to width */
+}
+
+button:hover span {
+    width: 100%; /* Expand width to 100% on hover */
+}
+
+button:hover {
+    background: #00008B; /* Change background color on hover */
+    border: none;
+}
+
+
+.SLIDE {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .slide {
+    display: flex;
+    height: 20%;
+    width: 30%;
+    transition: transform 0.5s ease;
+    animation: slideAnimation 7s linear infinite running;
+  }
+  
+  .slide img {
+    width: 60%;
+    height: 60%;
+    float: left;
+    object-fit: cover;
+  }
+  
+  
+  @keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+  
+    100% {
+        transform: translateX(-100%);
+    }
+  }
+
+
+  .image-description {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.image-description img {
+    width: auto; /* Adjust image width as needed */
+    height: 200px; /* Set the desired height */
+}
+
+.image-description p {
+    margin-top: 10px;
+    display:inline-block;
+    font-size: 12px; /* Adjust font size as needed */
+}
+
+/*reach*/
+.reach {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.reach p {
+    color: #00008B;
+    margin-bottom: 20px;
+    font-size: medium;
+}
+
+.reach button {
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 0 10px; /* Added margin */
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #00008B;
+    color: goldenrod;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: transparent;
+    transition: 0.5s;
+    display: inline-block; /* Changed display to inline-block */
+}
+
+.reach button span {
+    background: #00008B;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: width 0.5s;
+}
+
+.reach button:hover span {
+    width: 100%;
+}
+
+.reach button:hover {
+    background: #00008B;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .reach {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .reach {
+        margin-top: 30px;
+    }
+
+    .reach p {
+        font-size: 14px;
+    }
+
+    .reach button {
+        width: 150px;
+        padding: 10px;
+        margin: 0 5px; /* Adjusted margin */
+    }
+}
+
+
+
+
+
+.footer {
+    background-color: goldenrod;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .footer .row {
+        flex-wrap: wrap;
+    }
+    .footer .col-md-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 15px;
+    }
+    .footer .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+}
+
+

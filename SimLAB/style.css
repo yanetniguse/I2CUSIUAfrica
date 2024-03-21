@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('background.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    width: 100%;
+    margin: auto;
+    margin-right: 10px; /* Adjusted margin */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0; /* Smaller padding */
+    color: yellow;
+    background-image: url('navbar_background.jpg');
+    /*  Dark blue background color */
+    /*border-radius: 20px; /* Rounded corners */
+}
+
+.logo {
+    width: 120px;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: yellow; /* Change color to darken blue */
+    text-transform: uppercase;
+    margin: 0 5px; /* Adjusted margin between links */
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.navbar a:last-child {
+    margin-right: 20px; /* Added margin after the "Contact" link */
+}
+
+.navbar a::after {
+    content: '';
+    height: 3px;
+    width: 100%;
+    background: #00008B;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: width 0.5s, opacity 0.5s;
+    opacity: 0; /* Initially hide the underline */
+}
+
+.navbar a:hover::after {
+    width: 100%;
+    opacity: 1; /* Show the underline on hover */
+}
+
+/*nav responsiveness*/
+/* Existing CSS */
+
+/* Existing CSS */
+
+/* Existing CSS */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 0; /* Adjusted padding */
+        flex-wrap: wrap;
+    }
+
+    .navbar a {
+        font-size: smaller; /* Adjusted font size */
+        margin: 5px; /* Adjusted margin */
+        margin-right: 10px; /* Adjusted margin */
+
+    }
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: floralwhite;
+    font-family: 'Karla', sans-serif;
+}
+
+h1 {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: lighter;
+}
+
+.slider-frame {
+    overflow: hidden;
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slide-images {
+    width: 300%;
+    height: 100%;
+    position: relative;
+    animation: slide_animation 10s infinite alternate;
+}
+
+.img-container {
+    height: 100%;
+    width: 33.33%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.content-container h4 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content-container h6 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.aligned-table {
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.aligned-table td {
+    padding: 10px;
+    border: 1px solid goldenrod;
+    text-align: center;
+}
+
+.aligned-table td:first-child {
+    background-color: yellow;
+    color: black;
+}
+
+@keyframes slide_animation {
+    0% { left: 0; }
+    33.33% { left: -100%; }
+    66.66% { left: -200%; }
+    100% { left: 0; }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    .slider-frame {
+        width: 90%;
+    }
+
+    .img-container {
+        width: 50%;
+    }
+
+    .content-container {
+        padding: 0 20px;
+    }
+}
+
+
+.footer {
+    background-color: goldenrod;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    overflow-x: auto; /* Allow horizontal scrolling on smaller screens */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+td i {
+    margin-right: 5px;
+}
+
+/* Optional: Add some spacing between the icon and text */
+td i {
+    margin-right: 5px;
+}
+
+/* Responsive CSS */
+@media (max-width: 768px) {
+    .footer {
+        overflow-x: auto;
+    }
+
+    table {
+        width: auto;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+    }
+}
+
+
